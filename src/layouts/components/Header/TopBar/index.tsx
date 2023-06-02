@@ -2,9 +2,9 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { FaBehance, FaDribbble, FaFacebookF, FaLinkedinIn, FaPinterest } from 'react-icons/fa';
 
-function TopBar() {
+function TopBar({ showTopBar }: any) {
     return (
-        <div className="bg-purple-color flex justify-center">
+        <div className={`bg-purple-color flex justify-center h-[40px] z-[9] relative ${!showTopBar ? 'hidden' : ''}`}>
             <div className="h-9 color text-white font-medium text-xs flex justify-between items-center min-w-[80%]">
                 <div className="flex justify-between items-center gap-8">
                     <span>+84 945 000 917</span>
